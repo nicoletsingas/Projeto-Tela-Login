@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --corMain: #f18b99; 
+    --corMainDark: #e66d7c;
+    --corBG: #fff3f5;
+    --corBorder: #dbd6ec;
+    }
+
+body{
+    background-color: var(--corBG);
+    height: 100vh;
+    overflow: hidden;
+}
+
+main{
+    position: relative;
+}
+
+#picture{
+    height: 100vh;
+    width: 100vw;
+}
+
+#picture img{
+    height: 100vh;
+    width: 60%;
+    object-fit: cover;
+}
+
+#formLogin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #fff3f571;
+    height: 360px;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 2px 2px 10px rgba(124, 124, 124, 0.342);
+    border-radius: 10px;
+    transform: translateY(-50%);
+}
+
+#formLogin h1{
+    color: var(--corMainDark);
+    font-size: 2em;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input{
+    height: 45px;
+    width: 100%;
+    background-color: #FFF;
+    border: 1px solid var(--corBorder);
+    outline-color: var(--corBorder);
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+#submit{
+    background-color: var(--corMain);
+    color: #FFF;
+    border: 1px solid var(--corMain);
+    outline-color: none;
+}
+
+#submit:hover{
+    background-color: var(--corMainDark);
+    border: 1px solid var(--corMainDarkin);
+    cursor: pointer; /*Ponteiro do mouse*/
+}
+
+#fogotPass{
+    font-size: .8em;
+}
+
+#fogotPass a {
+    color: #e66d7c;
+}
+
+
+/* Responsivo */
+
+@media screen and (max-width: 880px){
+    #picture img{
+        height: 50%;
+        width: 100%;
+        position: relative;
+    }
+
+    #picture::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-color: rgba(0, 0, 0, 0.253);
+        
+    }
+
+    #formLogin{
+        background-color: #fff3f5c5;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+@media screen and (max-width: 480px){
+    #formLogin{
+        width: 90%;
+        padding-bottom: 5px;
+    }
+    
+}

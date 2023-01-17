@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Login</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section id="login">
+            <div id="picture">
+                <img src="assets/sakura001.jpg" alt="imagem de cerejeira">
+            </div>
+            <div id="formLogin">
+                <h1>Login</h1>
+                <p>Faça login para acessar a conta</p>
+                <form action="login.php" method="post" autocomplete="on">
+                    <input type="email" name="mail" id="email" placeholder="Insira seu email" autocomplete="email" required maxlength="40">
+                    <input type="password" name="senha" id="password" placeholder="Insira sua senha" required minlength="8" maxlength="20">
+                    <input type="submit" value="Entrar" id="submit" autocomplete="current-password">
+                </form>
+                <p id="fogotPass">Esqueceu a senha? <a href="#">click aqui</a> para alterar</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
